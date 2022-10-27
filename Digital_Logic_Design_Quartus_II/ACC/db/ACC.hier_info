@@ -1,0 +1,69 @@
+|ACC
+ACC0out <= 4BitCounter:inst.Aout
+C11 => inst5.IN0
+ALU3 => 74157:inst2.A1
+MDR3 => 74157:inst2.B1
+C10 => 74157:inst2.SEL
+MDR2 => 74157:inst2.B2
+ALU1 => 74157:inst2.A3
+MDR1 => 74157:inst2.B3
+ALU2 => 74157:inst2.A2
+MDR0 => 74157:inst2.B4
+ALU0 => 74157:inst2.A4
+C9 => inst4.IN0
+C8 => inst3.IN0
+ACC1out <= 4BitCounter:inst.Bout
+ACC2out <= 4BitCounter:inst.Cout
+ACC3out <= 4BitCounter:inst.Dout
+
+
+|ACC|4BitCounter:inst
+Aout <= 74193:inst.QA
+D => 74193:inst.D
+C => 74193:inst.C
+B => 74193:inst.B
+A => 74193:inst.A
+Clear => inst2.IN0
+Increment => inst1.IN0
+Load => 74193:inst.LDN
+Bout <= 74193:inst.QB
+Cout <= 74193:inst.QC
+Dout <= 74193:inst.QD
+
+
+|ACC|4BitCounter:inst|74193:inst
+BON <= 28.DB_MAX_OUTPUT_PORT_TYPE
+CLR => 44.IN0
+LDN => 43.IN0
+B => 53.IN2
+A => 52.IN2
+DN => 90.IN0
+UP => 89.IN0
+C => 54.IN2
+D => 55.IN2
+CON <= 27.DB_MAX_OUTPUT_PORT_TYPE
+QD <= 23.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 24.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 25.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 26.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ACC|74157:inst2
+Y4 <= 25.DB_MAX_OUTPUT_PORT_TYPE
+A4 => 20.IN0
+GN => 12.IN0
+GN => 13.IN0
+SEL => 12.IN1
+SEL => 1.IN0
+B4 => 21.IN0
+Y3 <= 24.DB_MAX_OUTPUT_PORT_TYPE
+A3 => 18.IN0
+B3 => 19.IN0
+Y2 <= 23.DB_MAX_OUTPUT_PORT_TYPE
+A2 => 16.IN0
+B2 => 17.IN0
+Y1 <= 22.DB_MAX_OUTPUT_PORT_TYPE
+A1 => 14.IN0
+B1 => 15.IN0
+
+

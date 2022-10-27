@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Levi-Ryzen/Documents/Quartus_II/FullAdder/FullAdder.bdf
+source_file = 1, C:/Users/Levi-Ryzen/Documents/Quartus_II/FullAdder/waveform.vwf
+source_file = 1, C:/Users/Levi-Ryzen/Documents/Quartus_II/FullAdder/Lab5_FA.bdf
+source_file = 1, C:/Users/Levi-Ryzen/Documents/Quartus_II/FullAdder/db/FullAdder.cbx.xml
+design_name = FullAdder
+instance = comp, \B~I , B, FullAdder, 1
+instance = comp, \C~I , C, FullAdder, 1
+instance = comp, \A~I , A, FullAdder, 1
+instance = comp, \inst6~0 , inst6~0, FullAdder, 1
+instance = comp, \inst5~0 , inst5~0, FullAdder, 1
+instance = comp, \S~I , S, FullAdder, 1
+instance = comp, \Cout~I , Cout, FullAdder, 1

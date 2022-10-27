@@ -1,0 +1,120 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 136 208)
+	(text "AddrSelector" (rect 5 0 80 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 176 25 188)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "C3" (rect 0 0 15 14)(font "Arial" (font_size 8)))
+		(text "C3" (rect 21 27 36 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "MDO0" (rect 0 0 34 14)(font "Arial" (font_size 8)))
+		(text "MDO0" (rect 21 43 55 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "MAR0" (rect 0 0 34 14)(font "Arial" (font_size 8)))
+		(text "MAR0" (rect 21 59 55 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "MDO1" (rect 0 0 34 14)(font "Arial" (font_size 8)))
+		(text "MDO1" (rect 21 75 55 89)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "MAR1" (rect 0 0 34 14)(font "Arial" (font_size 8)))
+		(text "MAR1" (rect 21 91 55 105)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "MDO2" (rect 0 0 34 14)(font "Arial" (font_size 8)))
+		(text "MDO2" (rect 21 107 55 121)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "MAR2" (rect 0 0 34 14)(font "Arial" (font_size 8)))
+		(text "MAR2" (rect 21 123 55 137)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 16 128))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "MDO3" (rect 0 0 34 14)(font "Arial" (font_size 8)))
+		(text "MDO3" (rect 21 139 55 153)(font "Arial" (font_size 8)))
+		(line (pt 0 144)(pt 16 144))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "MAR3" (rect 0 0 34 14)(font "Arial" (font_size 8)))
+		(text "MAR3" (rect 21 155 55 169)(font "Arial" (font_size 8)))
+		(line (pt 0 160)(pt 16 160))
+	)
+	(port
+		(pt 120 32)
+		(output)
+		(text "ADD0" (rect 0 0 33 14)(font "Arial" (font_size 8)))
+		(text "ADD0" (rect 66 27 99 41)(font "Arial" (font_size 8)))
+		(line (pt 120 32)(pt 104 32))
+	)
+	(port
+		(pt 120 48)
+		(output)
+		(text "ADD1" (rect 0 0 33 14)(font "Arial" (font_size 8)))
+		(text "ADD1" (rect 66 43 99 57)(font "Arial" (font_size 8)))
+		(line (pt 120 48)(pt 104 48))
+	)
+	(port
+		(pt 120 64)
+		(output)
+		(text "ADD2" (rect 0 0 33 14)(font "Arial" (font_size 8)))
+		(text "ADD2" (rect 66 59 99 73)(font "Arial" (font_size 8)))
+		(line (pt 120 64)(pt 104 64))
+	)
+	(port
+		(pt 120 80)
+		(output)
+		(text "ADD3" (rect 0 0 33 14)(font "Arial" (font_size 8)))
+		(text "ADD3" (rect 66 75 99 89)(font "Arial" (font_size 8)))
+		(line (pt 120 80)(pt 104 80))
+	)
+	(drawing
+		(rectangle (rect 16 16 104 176))
+	)
+)

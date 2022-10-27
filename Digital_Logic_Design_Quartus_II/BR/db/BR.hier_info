@@ -1,0 +1,49 @@
+|BR
+ACC3 <= RegisterPIPO75:inst.Dout
+ALU3 => RegisterPIPO75:inst.D
+ALU2 => RegisterPIPO75:inst.C
+ALU1 => RegisterPIPO75:inst.B
+ALU0 => RegisterPIPO75:inst.A
+Clear => inst3.IN0
+C14 => inst2.IN0
+ACC2 <= RegisterPIPO75:inst.Cout
+ACC1 <= RegisterPIPO75:inst.Bout
+ACC0 <= RegisterPIPO75:inst.Aout
+
+
+|BR|RegisterPIPO75:inst
+Dout <= 74175:inst.1Q
+Clear => 74175:inst.CLRN
+Load => inst1.IN0
+B => 74175:inst.3D
+C => 74175:inst.2D
+D => 74175:inst.1D
+A => 74175:inst.4D
+Cout <= 74175:inst.2Q
+Bout <= 74175:inst.3Q
+Aout <= 74175:inst.4Q
+
+
+|BR|RegisterPIPO75:inst|74175:inst
+1Q <= 16.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => 16.ACLR
+CLRN => 15.ACLR
+CLRN => 14.ACLR
+CLRN => 13.ACLR
+CLK => 16.CLK
+CLK => 15.CLK
+CLK => 14.CLK
+CLK => 13.CLK
+1D => 16.DATAIN
+1QN <= 1.DB_MAX_OUTPUT_PORT_TYPE
+2Q <= 15.DB_MAX_OUTPUT_PORT_TYPE
+2D => 15.DATAIN
+2QN <= 2.DB_MAX_OUTPUT_PORT_TYPE
+3Q <= 14.DB_MAX_OUTPUT_PORT_TYPE
+3D => 14.DATAIN
+3QN <= 3.DB_MAX_OUTPUT_PORT_TYPE
+4Q <= 13.DB_MAX_OUTPUT_PORT_TYPE
+4D => 13.DATAIN
+4QN <= 4.DB_MAX_OUTPUT_PORT_TYPE
+
+

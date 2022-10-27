@@ -1,0 +1,28 @@
+|Lab5FA
+Aout <= A.DB_MAX_OUTPUT_PORT_TYPE
+A => Aout.DATAIN
+A => FullAdder:inst1.A
+Bout <= B.DB_MAX_OUTPUT_PORT_TYPE
+B => Bout.DATAIN
+B => FullAdder:inst1.B
+Co <= C.DB_MAX_OUTPUT_PORT_TYPE
+C => Co.DATAIN
+C => FullAdder:inst1.C
+S <= FullAdder:inst1.S
+Cout <= FullAdder:inst1.Cout
+
+
+|Lab5FA|FullAdder:inst1
+S <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst3.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst4.IN0
+B => inst2.IN1
+C => inst6.IN1
+C => inst3.IN1
+C => inst4.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+

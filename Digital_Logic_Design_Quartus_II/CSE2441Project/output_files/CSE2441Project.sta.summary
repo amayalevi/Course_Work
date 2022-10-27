@@ -1,0 +1,189 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'CU:inst1|triscFSM1:inst2|state.S'
+Slack : -7.810
+TNS   : -28.448
+
+Type  : Slow Model Setup 'CU:inst1|triscFSM1:inst2|state.F'
+Slack : -7.111
+TNS   : -25.007
+
+Type  : Slow Model Setup 'CU:inst1|triscFSM1:inst2|state.E'
+Slack : -5.498
+TNS   : -42.345
+
+Type  : Slow Model Setup 'ACC:inst5|4BitCounter:inst|74193:inst|24~1'
+Slack : -4.752
+TNS   : -4.752
+
+Type  : Slow Model Setup 'Clock'
+Slack : -3.340
+TNS   : -92.686
+
+Type  : Slow Model Hold 'CU:inst1|triscFSM1:inst2|state.E'
+Slack : -3.610
+TNS   : -12.021
+
+Type  : Slow Model Hold 'Clock'
+Slack : -2.572
+TNS   : -7.669
+
+Type  : Slow Model Hold 'CU:inst1|triscFSM1:inst2|state.F'
+Slack : -1.330
+TNS   : -1.330
+
+Type  : Slow Model Hold 'ACC:inst5|4BitCounter:inst|74193:inst|24~1'
+Slack : 0.065
+TNS   : 0.000
+
+Type  : Slow Model Hold 'CU:inst1|triscFSM1:inst2|state.S'
+Slack : 0.800
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'CU:inst1|triscFSM1:inst2|state.F'
+Slack : -7.248
+TNS   : -26.005
+
+Type  : Slow Model Recovery 'CU:inst1|triscFSM1:inst2|state.E'
+Slack : -5.864
+TNS   : -20.797
+
+Type  : Slow Model Recovery 'ACC:inst5|4BitCounter:inst|74193:inst|24~1'
+Slack : -4.889
+TNS   : -4.889
+
+Type  : Slow Model Recovery 'CU:inst1|triscFSM1:inst2|state.S'
+Slack : -3.272
+TNS   : -11.984
+
+Type  : Slow Model Removal 'ACC:inst5|4BitCounter:inst|74193:inst|24~1'
+Slack : 0.830
+TNS   : 0.000
+
+Type  : Slow Model Removal 'CU:inst1|triscFSM1:inst2|state.F'
+Slack : 2.000
+TNS   : 0.000
+
+Type  : Slow Model Removal 'CU:inst1|triscFSM1:inst2|state.S'
+Slack : 3.472
+TNS   : 0.000
+
+Type  : Slow Model Removal 'CU:inst1|triscFSM1:inst2|state.E'
+Slack : 3.937
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'Clock'
+Slack : -2.064
+TNS   : -167.483
+
+Type  : Slow Model Minimum Pulse Width 'CU:inst1|triscFSM1:inst2|state.E'
+Slack : -0.611
+TNS   : -9.776
+
+Type  : Slow Model Minimum Pulse Width 'CU:inst1|triscFSM1:inst2|state.F'
+Slack : -0.611
+TNS   : -4.888
+
+Type  : Slow Model Minimum Pulse Width 'CU:inst1|triscFSM1:inst2|state.S'
+Slack : -0.611
+TNS   : -4.888
+
+Type  : Slow Model Minimum Pulse Width 'ACC:inst5|4BitCounter:inst|74193:inst|24~1'
+Slack : -0.611
+TNS   : -1.222
+
+Type  : Fast Model Setup 'CU:inst1|triscFSM1:inst2|state.S'
+Slack : -3.272
+TNS   : -10.770
+
+Type  : Fast Model Setup 'CU:inst1|triscFSM1:inst2|state.F'
+Slack : -3.026
+TNS   : -9.494
+
+Type  : Fast Model Setup 'CU:inst1|triscFSM1:inst2|state.E'
+Slack : -2.351
+TNS   : -16.931
+
+Type  : Fast Model Setup 'ACC:inst5|4BitCounter:inst|74193:inst|24~1'
+Slack : -1.944
+TNS   : -1.944
+
+Type  : Fast Model Setup 'Clock'
+Slack : -1.460
+TNS   : -31.369
+
+Type  : Fast Model Hold 'CU:inst1|triscFSM1:inst2|state.E'
+Slack : -1.888
+TNS   : -4.030
+
+Type  : Fast Model Hold 'Clock'
+Slack : -1.373
+TNS   : -5.498
+
+Type  : Fast Model Hold 'CU:inst1|triscFSM1:inst2|state.F'
+Slack : -0.650
+TNS   : -0.650
+
+Type  : Fast Model Hold 'CU:inst1|triscFSM1:inst2|state.S'
+Slack : 0.085
+TNS   : 0.000
+
+Type  : Fast Model Hold 'ACC:inst5|4BitCounter:inst|74193:inst|24~1'
+Slack : 0.438
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'CU:inst1|triscFSM1:inst2|state.F'
+Slack : -3.237
+TNS   : -10.435
+
+Type  : Fast Model Recovery 'CU:inst1|triscFSM1:inst2|state.E'
+Slack : -2.517
+TNS   : -8.435
+
+Type  : Fast Model Recovery 'ACC:inst5|4BitCounter:inst|74193:inst|24~1'
+Slack : -2.155
+TNS   : -2.155
+
+Type  : Fast Model Recovery 'CU:inst1|triscFSM1:inst2|state.S'
+Slack : -1.277
+TNS   : -4.688
+
+Type  : Fast Model Removal 'ACC:inst5|4BitCounter:inst|74193:inst|24~1'
+Slack : 0.822
+TNS   : 0.000
+
+Type  : Fast Model Removal 'CU:inst1|triscFSM1:inst2|state.F'
+Slack : 0.877
+TNS   : 0.000
+
+Type  : Fast Model Removal 'CU:inst1|triscFSM1:inst2|state.S'
+Slack : 1.947
+TNS   : 0.000
+
+Type  : Fast Model Removal 'CU:inst1|triscFSM1:inst2|state.E'
+Slack : 2.117
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'Clock'
+Slack : -2.000
+TNS   : -158.222
+
+Type  : Fast Model Minimum Pulse Width 'CU:inst1|triscFSM1:inst2|state.E'
+Slack : -0.500
+TNS   : -8.000
+
+Type  : Fast Model Minimum Pulse Width 'CU:inst1|triscFSM1:inst2|state.F'
+Slack : -0.500
+TNS   : -4.000
+
+Type  : Fast Model Minimum Pulse Width 'CU:inst1|triscFSM1:inst2|state.S'
+Slack : -0.500
+TNS   : -4.000
+
+Type  : Fast Model Minimum Pulse Width 'ACC:inst5|4BitCounter:inst|74193:inst|24~1'
+Slack : -0.500
+TNS   : -1.000
+
+------------------------------------------------------------

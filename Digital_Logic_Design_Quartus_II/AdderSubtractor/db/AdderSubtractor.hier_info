@@ -1,0 +1,97 @@
+|AdderSubtractor
+R0 <= RippleCarryAdder:inst.S0
+A0 => RippleCarryAdder:inst.A0
+A1 => RippleCarryAdder:inst.A1
+A2 => RippleCarryAdder:inst.A2
+A3 => RippleCarryAdder:inst.A3
+A3 => inst6.IN1
+A3 => inst8.IN0
+B0 => inst2.IN0
+AddSub => inst2.IN1
+AddSub => inst3.IN1
+AddSub => inst4.IN1
+AddSub => inst5.IN1
+AddSub => RippleCarryAdder:inst.C0
+B1 => inst3.IN0
+B2 => inst4.IN0
+B3 => inst5.IN0
+R1 <= RippleCarryAdder:inst.S1
+R2 <= RippleCarryAdder:inst.S2
+R3 <= RippleCarryAdder:inst.S3
+Cout <= RippleCarryAdder:inst.C4
+OVR <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AdderSubtractor|RippleCarryAdder:inst
+S0 <= FullAdder:inst.S
+A0 => FullAdder:inst.A
+B0 => FullAdder:inst.B
+C0 => FullAdder:inst.C
+S1 <= FullAdder:inst2.S
+A1 => FullAdder:inst2.A
+B1 => FullAdder:inst2.B
+S2 <= FullAdder:inst3.S
+A2 => FullAdder:inst3.A
+B2 => FullAdder:inst3.B
+S3 <= FullAdder:inst4.S
+A3 => FullAdder:inst4.A
+B3 => FullAdder:inst4.B
+C4 <= FullAdder:inst4.Cout
+
+
+|AdderSubtractor|RippleCarryAdder:inst|FullAdder:inst
+S <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst3.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst4.IN0
+B => inst2.IN1
+C => inst6.IN1
+C => inst3.IN1
+C => inst4.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AdderSubtractor|RippleCarryAdder:inst|FullAdder:inst2
+S <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst3.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst4.IN0
+B => inst2.IN1
+C => inst6.IN1
+C => inst3.IN1
+C => inst4.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AdderSubtractor|RippleCarryAdder:inst|FullAdder:inst3
+S <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst3.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst4.IN0
+B => inst2.IN1
+C => inst6.IN1
+C => inst3.IN1
+C => inst4.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AdderSubtractor|RippleCarryAdder:inst|FullAdder:inst4
+S <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst3.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst4.IN0
+B => inst2.IN1
+C => inst6.IN1
+C => inst3.IN1
+C => inst4.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+

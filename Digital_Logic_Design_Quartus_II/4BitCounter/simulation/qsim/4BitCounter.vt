@@ -1,0 +1,394 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "10/25/2020 17:52:17"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    4BitCounter
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module 4BitCounter_vlg_sample_tst(
+	A,
+	B,
+	C,
+	Clear,
+	D,
+	Increment,
+	Load,
+	sampler_tx
+);
+input  A;
+input  B;
+input  C;
+input  Clear;
+input  D;
+input  Increment;
+input  Load;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(A or B or C or Clear or D or Increment or Load)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module 4BitCounter_vlg_check_tst (
+	Aout,
+	Bout,
+	Cout,
+	Dout,
+	sampler_rx
+);
+input  Aout;
+input  Bout;
+input  Cout;
+input  Dout;
+input sampler_rx;
+
+reg  Aout_expected;
+reg  Bout_expected;
+reg  Cout_expected;
+reg  Dout_expected;
+
+reg  Aout_prev;
+reg  Bout_prev;
+reg  Cout_prev;
+reg  Dout_prev;
+
+reg  Aout_expected_prev;
+reg  Bout_expected_prev;
+reg  Cout_expected_prev;
+reg  Dout_expected_prev;
+
+reg  last_Aout_exp;
+reg  last_Bout_exp;
+reg  last_Cout_exp;
+reg  last_Dout_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:4] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 4'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	Aout_prev = Aout;
+	Bout_prev = Bout;
+	Cout_prev = Cout;
+	Dout_prev = Dout;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	Aout_expected_prev = Aout_expected;
+	Bout_expected_prev = Bout_expected;
+	Cout_expected_prev = Cout_expected;
+	Dout_expected_prev = Dout_expected;
+end
+
+
+
+// expected Dout
+initial
+begin
+	Dout_expected = 1'bX;
+end 
+
+// expected Cout
+initial
+begin
+	Cout_expected = 1'bX;
+end 
+
+// expected Bout
+initial
+begin
+	Bout_expected = 1'bX;
+end 
+
+// expected Aout
+initial
+begin
+	Aout_expected = 1'bX;
+end 
+// generate trigger
+always @(Aout_expected or Aout or Bout_expected or Bout or Cout_expected or Cout or Dout_expected or Dout)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected Aout = %b | expected Bout = %b | expected Cout = %b | expected Dout = %b | ",Aout_expected_prev,Bout_expected_prev,Cout_expected_prev,Dout_expected_prev);
+	$display("| real Aout = %b | real Bout = %b | real Cout = %b | real Dout = %b | ",Aout_prev,Bout_prev,Cout_prev,Dout_prev);
+`endif
+	if (
+		( Aout_expected_prev !== 1'bx ) && ( Aout_prev !== Aout_expected_prev )
+		&& ((Aout_expected_prev !== last_Aout_exp) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Aout :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Aout_expected_prev);
+		$display ("     Real value = %b", Aout_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Aout_exp = Aout_expected_prev;
+	end
+	if (
+		( Bout_expected_prev !== 1'bx ) && ( Bout_prev !== Bout_expected_prev )
+		&& ((Bout_expected_prev !== last_Bout_exp) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Bout :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Bout_expected_prev);
+		$display ("     Real value = %b", Bout_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_Bout_exp = Bout_expected_prev;
+	end
+	if (
+		( Cout_expected_prev !== 1'bx ) && ( Cout_prev !== Cout_expected_prev )
+		&& ((Cout_expected_prev !== last_Cout_exp) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Cout :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Cout_expected_prev);
+		$display ("     Real value = %b", Cout_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_Cout_exp = Cout_expected_prev;
+	end
+	if (
+		( Dout_expected_prev !== 1'bx ) && ( Dout_prev !== Dout_expected_prev )
+		&& ((Dout_expected_prev !== last_Dout_exp) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Dout :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Dout_expected_prev);
+		$display ("     Real value = %b", Dout_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_Dout_exp = Dout_expected_prev;
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#4000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module 4BitCounter_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg A;
+reg B;
+reg C;
+reg Clear;
+reg D;
+reg Increment;
+reg Load;
+// wires                                               
+wire Aout;
+wire Bout;
+wire Cout;
+wire Dout;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+4BitCounter i1 (
+// port map - connection between master ports and signals/registers   
+	.A(A),
+	.Aout(Aout),
+	.B(B),
+	.Bout(Bout),
+	.C(C),
+	.Clear(Clear),
+	.Cout(Cout),
+	.D(D),
+	.Dout(Dout),
+	.Increment(Increment),
+	.Load(Load)
+);
+
+// D
+initial
+begin
+	D = 1'b0;
+	D = #2100000 1'b1;
+	D = #100000 1'b0;
+end 
+
+// C
+initial
+begin
+	C = 1'b0;
+	C = #3500000 1'b1;
+	C = #100000 1'b0;
+end 
+
+// B
+initial
+begin
+	B = 1'b0;
+	B = #2100000 1'b1;
+	B = #100000 1'b0;
+	B = #1300000 1'b1;
+	B = #100000 1'b0;
+end 
+
+// A
+initial
+begin
+	A = 1'b0;
+	A = #2100000 1'b1;
+	A = #100000 1'b0;
+end 
+
+// Increment
+initial
+begin
+	Increment = 1'b1;
+	Increment = #100000 1'b0;
+	Increment = #100000 1'b1;
+	Increment = #100000 1'b0;
+	Increment = #100000 1'b1;
+	Increment = #100000 1'b0;
+	Increment = #100000 1'b1;
+	Increment = #100000 1'b0;
+	Increment = #100000 1'b1;
+	Increment = #100000 1'b0;
+	Increment = #100000 1'b1;
+	Increment = #100000 1'b0;
+	Increment = #100000 1'b1;
+	Increment = #100000 1'b0;
+	Increment = #100000 1'b1;
+	Increment = #100000 1'b0;
+	Increment = #100000 1'b1;
+	Increment = #100000 1'b0;
+	Increment = #100000 1'b1;
+	Increment = #100000 1'b0;
+	Increment = #100000 1'b1;
+	Increment = #300000 1'b0;
+	Increment = #100000 1'b1;
+	Increment = #100000 1'b0;
+	Increment = #100000 1'b1;
+	Increment = #100000 1'b0;
+	Increment = #100000 1'b1;
+	Increment = #100000 1'b0;
+	Increment = #100000 1'b1;
+	Increment = #100000 1'b0;
+	Increment = #100000 1'b1;
+	Increment = #100000 1'b0;
+	Increment = #100000 1'b1;
+	Increment = #200000 1'b0;
+	Increment = #100000 1'b1;
+	Increment = #100000 1'b0;
+	Increment = #100000 1'b1;
+end 
+
+// Load
+initial
+begin
+	Load = 1'b1;
+	Load = #2100000 1'b0;
+	Load = #100000 1'b1;
+	Load = #1300000 1'b0;
+	Load = #100000 1'b1;
+end 
+
+// Clear
+initial
+begin
+	Clear = 1'b1;
+	Clear = #2000000 1'b0;
+	Clear = #100000 1'b1;
+	Clear = #1300000 1'b0;
+	Clear = #100000 1'b1;
+end 
+
+4BitCounter_vlg_sample_tst tb_sample (
+	.A(A),
+	.B(B),
+	.C(C),
+	.Clear(Clear),
+	.D(D),
+	.Increment(Increment),
+	.Load(Load),
+	.sampler_tx(sampler)
+);
+
+4BitCounter_vlg_check_tst tb_out(
+	.Aout(Aout),
+	.Bout(Bout),
+	.Cout(Cout),
+	.Dout(Dout),
+	.sampler_rx(sampler)
+);
+endmodule
+

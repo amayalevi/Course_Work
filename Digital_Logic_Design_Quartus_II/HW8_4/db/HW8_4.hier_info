@@ -1,0 +1,37 @@
+|HW8_4
+C0 <= triscFSM1:inst.C0
+SysClock => triscFSM1:inst.SysClock
+StartStop => triscFSM1:inst.StartStop
+INC => triscFSM1:inst.INC
+CLR => triscFSM1:inst.CLR
+JMP => triscFSM1:inst.JMP
+C1 <= triscFSM1:inst.C1
+C2 <= triscFSM1:inst.C2
+C3 <= triscFSM1:inst.C3
+C4 <= triscFSM1:inst.C4
+C7 <= triscFSM1:inst.C7
+C8 <= triscFSM1:inst.C8
+C9 <= triscFSM1:inst.C9
+
+
+|HW8_4|triscFSM1:inst
+SysClock => state~1.DATAIN
+StartStop => state~3.DATAIN
+INC => nextstate.H.OUTPUTSELECT
+INC => nextstate.G.OUTPUTSELECT
+INC => nextstate.E.IN1
+INC => nextstate.F.DATAA
+CLR => nextstate.E.IN0
+CLR => nextstate.G.DATAA
+CLR => nextstate.H.DATAA
+JMP => nextstate.E.IN1
+C0 <= C0.DB_MAX_OUTPUT_PORT_TYPE
+C1 <= C1.DB_MAX_OUTPUT_PORT_TYPE
+C2 <= C7.DB_MAX_OUTPUT_PORT_TYPE
+C3 <= C3.DB_MAX_OUTPUT_PORT_TYPE
+C4 <= C4.DB_MAX_OUTPUT_PORT_TYPE
+C7 <= C7.DB_MAX_OUTPUT_PORT_TYPE
+C8 <= C8.DB_MAX_OUTPUT_PORT_TYPE
+C9 <= C9.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,10 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Levi-Ryzen/Documents/Quartus_II/HW6/Problem9.v
+source_file = 1, C:/Users/Levi-Ryzen/Documents/Quartus_II/HW6/Waveform.vwf
+source_file = 1, C:/Users/Levi-Ryzen/Documents/Quartus_II/HW6/db/Problem9.cbx.xml
+design_name = Problem9
+instance = comp, \CLK~I , CLK, Problem9, 1
+instance = comp, \x~I , x, Problem9, 1
+instance = comp, \state~0 , state~0, Problem9, 1
+instance = comp, \CLR~I , CLR, Problem9, 1
+instance = comp, \z~I , z, Problem9, 1

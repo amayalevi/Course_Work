@@ -1,0 +1,1065 @@
+TimeQuest Timing Analyzer report for PC
+Mon Nov 30 07:44:31 2020
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'C2'
+ 12. Slow Model Setup: 'ADDR0'
+ 13. Slow Model Hold: 'C2'
+ 14. Slow Model Hold: 'ADDR0'
+ 15. Slow Model Recovery: 'C2'
+ 16. Slow Model Removal: 'C2'
+ 17. Slow Model Minimum Pulse Width: 'ADDR0'
+ 18. Slow Model Minimum Pulse Width: 'C2'
+ 19. Setup Times
+ 20. Hold Times
+ 21. Clock to Output Times
+ 22. Minimum Clock to Output Times
+ 23. Propagation Delay
+ 24. Minimum Propagation Delay
+ 25. Fast Model Setup Summary
+ 26. Fast Model Hold Summary
+ 27. Fast Model Recovery Summary
+ 28. Fast Model Removal Summary
+ 29. Fast Model Minimum Pulse Width Summary
+ 30. Fast Model Setup: 'C2'
+ 31. Fast Model Setup: 'ADDR0'
+ 32. Fast Model Hold: 'C2'
+ 33. Fast Model Hold: 'ADDR0'
+ 34. Fast Model Recovery: 'C2'
+ 35. Fast Model Removal: 'C2'
+ 36. Fast Model Minimum Pulse Width: 'ADDR0'
+ 37. Fast Model Minimum Pulse Width: 'C2'
+ 38. Setup Times
+ 39. Hold Times
+ 40. Clock to Output Times
+ 41. Minimum Clock to Output Times
+ 42. Propagation Delay
+ 43. Minimum Propagation Delay
+ 44. Multicorner Timing Analysis Summary
+ 45. Setup Times
+ 46. Hold Times
+ 47. Clock to Output Times
+ 48. Minimum Clock to Output Times
+ 49. Progagation Delay
+ 50. Minimum Progagation Delay
+ 51. Setup Transfers
+ 52. Hold Transfers
+ 53. Recovery Transfers
+ 54. Removal Transfers
+ 55. Report TCCS
+ 56. Report RSKM
+ 57. Unconstrained Paths
+ 58. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; PC                                                                ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C20F484C7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; ADDR0      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { ADDR0 } ;
+; C2         ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { C2 }    ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                   ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 581.73 MHz ; 405.02 MHz      ; C2         ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 650.62 MHz ; 380.08 MHz      ; ADDR0      ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; C2    ; -2.009 ; -6.395        ;
+; ADDR0 ; -0.537 ; -1.559        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; C2    ; 0.195 ; 0.000         ;
+; ADDR0 ; 0.464 ; 0.000         ;
++-------+-------+---------------+
+
+
++--------------------------------+
+; Slow Model Recovery Summary    ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; C2    ; -0.568 ; -0.568        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Removal Summary    ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; C2    ; 0.704 ; 0.000         ;
++-------+-------+---------------+
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; ADDR0 ; -1.631 ; -6.221                ;
+; C2    ; -1.469 ; -6.357                ;
++-------+--------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'C2'                                                                                                                                             ;
++--------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                ; To Node                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.009 ; 4BitCounter:inst|74193:inst|23~_emulated ; 4BitCounter:inst|74193:inst|23~_emulated ; ADDR0        ; C2          ; 0.500        ; -1.145     ; 1.402      ;
+; -1.988 ; 4BitCounter:inst|74193:inst|24~_emulated ; 4BitCounter:inst|74193:inst|24~_emulated ; ADDR0        ; C2          ; 0.500        ; -1.138     ; 1.388      ;
+; -1.679 ; 4BitCounter:inst|74193:inst|25~_emulated ; 4BitCounter:inst|74193:inst|25~_emulated ; ADDR0        ; C2          ; 0.500        ; -0.796     ; 1.421      ;
+; -0.719 ; 4BitCounter:inst|74193:inst|26~_emulated ; 4BitCounter:inst|74193:inst|26~_emulated ; C2           ; C2          ; 1.000        ; 0.000      ; 1.757      ;
+; -0.383 ; 4BitCounter:inst|74193:inst|25~_emulated ; 4BitCounter:inst|74193:inst|25~_emulated ; C2           ; C2          ; 1.000        ; 0.000      ; 1.421      ;
+; -0.364 ; 4BitCounter:inst|74193:inst|23~_emulated ; 4BitCounter:inst|74193:inst|23~_emulated ; C2           ; C2          ; 1.000        ; 0.000      ; 1.402      ;
+; -0.350 ; 4BitCounter:inst|74193:inst|24~_emulated ; 4BitCounter:inst|74193:inst|24~_emulated ; C2           ; C2          ; 1.000        ; 0.000      ; 1.388      ;
+; -0.097 ; ADDR0                                    ; 4BitCounter:inst|74193:inst|26~_emulated ; ADDR0        ; C2          ; 0.500        ; 2.626      ; 3.261      ;
+; 0.403  ; ADDR0                                    ; 4BitCounter:inst|74193:inst|26~_emulated ; ADDR0        ; C2          ; 1.000        ; 2.626      ; 3.261      ;
++--------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'ADDR0'                                                                                                                                          ;
++--------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                ; To Node                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.537 ; 4BitCounter:inst|74193:inst|25~_emulated ; 4BitCounter:inst|74193:inst|25~_emulated ; ADDR0        ; ADDR0       ; 1.000        ; -0.154     ; 1.421      ;
+; -0.518 ; 4BitCounter:inst|74193:inst|23~_emulated ; 4BitCounter:inst|74193:inst|23~_emulated ; ADDR0        ; ADDR0       ; 1.000        ; -0.154     ; 1.402      ;
+; -0.504 ; 4BitCounter:inst|74193:inst|24~_emulated ; 4BitCounter:inst|74193:inst|24~_emulated ; ADDR0        ; ADDR0       ; 1.000        ; -0.154     ; 1.388      ;
+; -0.241 ; 4BitCounter:inst|74193:inst|25~_emulated ; 4BitCounter:inst|74193:inst|25~_emulated ; C2           ; ADDR0       ; 0.500        ; 0.642      ; 1.421      ;
+; 0.127  ; 4BitCounter:inst|74193:inst|23~_emulated ; 4BitCounter:inst|74193:inst|23~_emulated ; C2           ; ADDR0       ; 0.500        ; 0.991      ; 1.402      ;
+; 0.134  ; 4BitCounter:inst|74193:inst|24~_emulated ; 4BitCounter:inst|74193:inst|24~_emulated ; C2           ; ADDR0       ; 0.500        ; 0.984      ; 1.388      ;
++--------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'C2'                                                                                                                                             ;
++-------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                ; To Node                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.195 ; ADDR0                                    ; 4BitCounter:inst|74193:inst|26~_emulated ; ADDR0        ; C2          ; 0.000        ; 2.626      ; 3.107      ;
+; 0.695 ; ADDR0                                    ; 4BitCounter:inst|74193:inst|26~_emulated ; ADDR0        ; C2          ; -0.500       ; 2.626      ; 3.107      ;
+; 1.102 ; 4BitCounter:inst|74193:inst|24~_emulated ; 4BitCounter:inst|74193:inst|24~_emulated ; C2           ; C2          ; 0.000        ; 0.000      ; 1.388      ;
+; 1.116 ; 4BitCounter:inst|74193:inst|23~_emulated ; 4BitCounter:inst|74193:inst|23~_emulated ; C2           ; C2          ; 0.000        ; 0.000      ; 1.402      ;
+; 1.135 ; 4BitCounter:inst|74193:inst|25~_emulated ; 4BitCounter:inst|74193:inst|25~_emulated ; C2           ; C2          ; 0.000        ; 0.000      ; 1.421      ;
+; 1.471 ; 4BitCounter:inst|74193:inst|26~_emulated ; 4BitCounter:inst|74193:inst|26~_emulated ; C2           ; C2          ; 0.000        ; 0.000      ; 1.757      ;
+; 2.277 ; 4BitCounter:inst|74193:inst|25~_emulated ; 4BitCounter:inst|74193:inst|25~_emulated ; ADDR0        ; C2          ; -0.500       ; -0.642     ; 1.421      ;
+; 2.586 ; 4BitCounter:inst|74193:inst|24~_emulated ; 4BitCounter:inst|74193:inst|24~_emulated ; ADDR0        ; C2          ; -0.500       ; -0.984     ; 1.388      ;
+; 2.607 ; 4BitCounter:inst|74193:inst|23~_emulated ; 4BitCounter:inst|74193:inst|23~_emulated ; ADDR0        ; C2          ; -0.500       ; -0.991     ; 1.402      ;
++-------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'ADDR0'                                                                                                                                          ;
++-------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                ; To Node                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.464 ; 4BitCounter:inst|74193:inst|24~_emulated ; 4BitCounter:inst|74193:inst|24~_emulated ; C2           ; ADDR0       ; -0.500       ; 1.138      ; 1.388      ;
+; 0.471 ; 4BitCounter:inst|74193:inst|23~_emulated ; 4BitCounter:inst|74193:inst|23~_emulated ; C2           ; ADDR0       ; -0.500       ; 1.145      ; 1.402      ;
+; 0.839 ; 4BitCounter:inst|74193:inst|25~_emulated ; 4BitCounter:inst|74193:inst|25~_emulated ; C2           ; ADDR0       ; -0.500       ; 0.796      ; 1.421      ;
+; 0.948 ; 4BitCounter:inst|74193:inst|24~_emulated ; 4BitCounter:inst|74193:inst|24~_emulated ; ADDR0        ; ADDR0       ; 0.000        ; 0.154      ; 1.388      ;
+; 0.962 ; 4BitCounter:inst|74193:inst|23~_emulated ; 4BitCounter:inst|74193:inst|23~_emulated ; ADDR0        ; ADDR0       ; 0.000        ; 0.154      ; 1.402      ;
+; 0.981 ; 4BitCounter:inst|74193:inst|25~_emulated ; 4BitCounter:inst|74193:inst|25~_emulated ; ADDR0        ; ADDR0       ; 0.000        ; 0.154      ; 1.421      ;
++-------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Recovery: 'C2'                                                                                                           ;
++--------+-----------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.568 ; ADDR0     ; 4BitCounter:inst|74193:inst|26~_emulated ; ADDR0        ; C2          ; 0.500        ; 2.626      ; 3.732      ;
+; -0.068 ; ADDR0     ; 4BitCounter:inst|74193:inst|26~_emulated ; ADDR0        ; C2          ; 1.000        ; 2.626      ; 3.732      ;
++--------+-----------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Removal: 'C2'                                                                                                           ;
++-------+-----------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.704 ; ADDR0     ; 4BitCounter:inst|74193:inst|26~_emulated ; ADDR0        ; C2          ; 0.000        ; 2.626      ; 3.616      ;
+; 1.204 ; ADDR0     ; 4BitCounter:inst|74193:inst|26~_emulated ; ADDR0        ; C2          ; -0.500       ; 2.626      ; 3.616      ;
++-------+-----------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'ADDR0'                                                                                   ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                   ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; ADDR0 ; Rise       ; ADDR0                                    ;
+; -0.765 ; 0.346        ; 1.111          ; High Pulse Width ; ADDR0 ; Fall       ; 4BitCounter:inst|74193:inst|23~_emulated ;
+; -0.765 ; 0.346        ; 1.111          ; Low Pulse Width  ; ADDR0 ; Fall       ; 4BitCounter:inst|74193:inst|23~_emulated ;
+; -0.765 ; 0.346        ; 1.111          ; High Pulse Width ; ADDR0 ; Fall       ; 4BitCounter:inst|74193:inst|24~_emulated ;
+; -0.765 ; 0.346        ; 1.111          ; Low Pulse Width  ; ADDR0 ; Fall       ; 4BitCounter:inst|74193:inst|24~_emulated ;
+; -0.765 ; 0.346        ; 1.111          ; High Pulse Width ; ADDR0 ; Fall       ; 4BitCounter:inst|74193:inst|25~_emulated ;
+; -0.765 ; 0.346        ; 1.111          ; Low Pulse Width  ; ADDR0 ; Fall       ; 4BitCounter:inst|74193:inst|25~_emulated ;
+; 0.346  ; 0.346        ; 0.000          ; High Pulse Width ; ADDR0 ; Fall       ; inst|inst|21|combout                     ;
+; 0.346  ; 0.346        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Fall       ; inst|inst|21|combout                     ;
+; 0.346  ; 0.346        ; 0.000          ; High Pulse Width ; ADDR0 ; Rise       ; inst|inst|21|datab                       ;
+; 0.346  ; 0.346        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Rise       ; inst|inst|21|datab                       ;
+; 0.346  ; 0.346        ; 0.000          ; High Pulse Width ; ADDR0 ; Fall       ; inst|inst|23~_emulated|clk               ;
+; 0.346  ; 0.346        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Fall       ; inst|inst|23~_emulated|clk               ;
+; 0.346  ; 0.346        ; 0.000          ; High Pulse Width ; ADDR0 ; Fall       ; inst|inst|24~_emulated|clk               ;
+; 0.346  ; 0.346        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Fall       ; inst|inst|24~_emulated|clk               ;
+; 0.346  ; 0.346        ; 0.000          ; High Pulse Width ; ADDR0 ; Fall       ; inst|inst|25~_emulated|clk               ;
+; 0.346  ; 0.346        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Fall       ; inst|inst|25~_emulated|clk               ;
+; 0.346  ; 0.346        ; 0.000          ; High Pulse Width ; ADDR0 ; Rise       ; inst|inst|26~2|combout                   ;
+; 0.346  ; 0.346        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Rise       ; inst|inst|26~2|combout                   ;
+; 0.346  ; 0.346        ; 0.000          ; High Pulse Width ; ADDR0 ; Fall       ; inst|inst|51|combout                     ;
+; 0.346  ; 0.346        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Fall       ; inst|inst|51|combout                     ;
+; 0.346  ; 0.346        ; 0.000          ; High Pulse Width ; ADDR0 ; Rise       ; inst|inst|51|datab                       ;
+; 0.346  ; 0.346        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Rise       ; inst|inst|51|datab                       ;
+; 0.346  ; 0.346        ; 0.000          ; High Pulse Width ; ADDR0 ; Fall       ; inst|inst|5|combout                      ;
+; 0.346  ; 0.346        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Fall       ; inst|inst|5|combout                      ;
+; 0.346  ; 0.346        ; 0.000          ; High Pulse Width ; ADDR0 ; Rise       ; inst|inst|5|datad                        ;
+; 0.346  ; 0.346        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Rise       ; inst|inst|5|datad                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ADDR0 ; Rise       ; ADDR0|combout                            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Rise       ; ADDR0|combout                            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ADDR0 ; Rise       ; inst|inst|26~2|datac                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Rise       ; inst|inst|26~2|datac                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ADDR0 ; Fall       ; inst|inst|26~2|datad                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Fall       ; inst|inst|26~2|datad                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ADDR0 ; Rise       ; inst|inst|52|combout                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Rise       ; inst|inst|52|combout                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ADDR0 ; Rise       ; inst|inst|52|datad                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Rise       ; inst|inst|52|datad                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ADDR0 ; Fall       ; inst|inst|85~0|combout                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Fall       ; inst|inst|85~0|combout                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ADDR0 ; Rise       ; inst|inst|85~0|datad                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Rise       ; inst|inst|85~0|datad                     ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'C2'                                                                                      ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                   ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------+
+; -1.469 ; 1.000        ; 2.469          ; Port Rate        ; C2    ; Rise       ; C2                                       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; C2    ; Rise       ; 4BitCounter:inst|74193:inst|23~_emulated ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; C2    ; Rise       ; 4BitCounter:inst|74193:inst|23~_emulated ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; C2    ; Rise       ; 4BitCounter:inst|74193:inst|24~_emulated ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; C2    ; Rise       ; 4BitCounter:inst|74193:inst|24~_emulated ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; C2    ; Rise       ; 4BitCounter:inst|74193:inst|25~_emulated ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; C2    ; Rise       ; 4BitCounter:inst|74193:inst|25~_emulated ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; C2    ; Rise       ; 4BitCounter:inst|74193:inst|26~_emulated ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; C2    ; Rise       ; 4BitCounter:inst|74193:inst|26~_emulated ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C2    ; Rise       ; C2|combout                               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C2    ; Rise       ; C2|combout                               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C2    ; Rise       ; inst|inst|21|combout                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C2    ; Rise       ; inst|inst|21|combout                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C2    ; Rise       ; inst|inst|21|datac                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C2    ; Rise       ; inst|inst|21|datac                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C2    ; Rise       ; inst|inst|23~_emulated|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C2    ; Rise       ; inst|inst|23~_emulated|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C2    ; Rise       ; inst|inst|24~_emulated|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C2    ; Rise       ; inst|inst|24~_emulated|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C2    ; Rise       ; inst|inst|25~_emulated|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C2    ; Rise       ; inst|inst|25~_emulated|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C2    ; Rise       ; inst|inst|26~_emulated|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C2    ; Rise       ; inst|inst|26~_emulated|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C2    ; Rise       ; inst|inst|51|combout                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C2    ; Rise       ; inst|inst|51|combout                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C2    ; Rise       ; inst|inst|51|datac                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C2    ; Rise       ; inst|inst|51|datac                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C2    ; Rise       ; inst|inst|5|combout                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C2    ; Rise       ; inst|inst|5|combout                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C2    ; Rise       ; inst|inst|5|datac                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C2    ; Rise       ; inst|inst|5|datac                        ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; ADDR1     ; ADDR0      ; -0.440 ; -0.440 ; Fall       ; ADDR0           ;
+; ADDR2     ; ADDR0      ; -0.840 ; -0.840 ; Fall       ; ADDR0           ;
+; ADDR3     ; ADDR0      ; 0.057  ; 0.057  ; Fall       ; ADDR0           ;
+; C0        ; ADDR0      ; 3.980  ; 3.980  ; Fall       ; ADDR0           ;
+; C1        ; ADDR0      ; 4.514  ; 4.514  ; Fall       ; ADDR0           ;
+; ADDR0     ; C2         ; 0.597  ; 0.597  ; Rise       ; C2              ;
+; ADDR1     ; C2         ; 0.202  ; 0.202  ; Rise       ; C2              ;
+; ADDR2     ; C2         ; 0.144  ; 0.144  ; Rise       ; C2              ;
+; ADDR3     ; C2         ; 1.048  ; 1.048  ; Rise       ; C2              ;
+; C0        ; C2         ; 5.093  ; 5.093  ; Rise       ; C2              ;
+; C1        ; C2         ; 5.548  ; 5.548  ; Rise       ; C2              ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; ADDR1     ; ADDR0      ; 1.078  ; 1.078  ; Fall       ; ADDR0           ;
+; ADDR2     ; ADDR0      ; 1.394  ; 1.394  ; Fall       ; ADDR0           ;
+; ADDR3     ; ADDR0      ; 0.538  ; 0.538  ; Fall       ; ADDR0           ;
+; C0        ; ADDR0      ; -3.124 ; -3.124 ; Fall       ; ADDR0           ;
+; C1        ; ADDR0      ; -2.887 ; -2.887 ; Fall       ; ADDR0           ;
+; ADDR0     ; C2         ; -0.195 ; -0.195 ; Rise       ; C2              ;
+; ADDR1     ; C2         ; 0.282  ; 0.282  ; Rise       ; C2              ;
+; ADDR2     ; C2         ; 0.256  ; 0.256  ; Rise       ; C2              ;
+; ADDR3     ; C2         ; -0.607 ; -0.607 ; Rise       ; C2              ;
+; C0        ; C2         ; -4.262 ; -4.262 ; Rise       ; C2              ;
+; C1        ; C2         ; -4.032 ; -4.032 ; Rise       ; C2              ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; ADDR0out  ; ADDR0      ; 6.385  ; 6.385  ; Rise       ; ADDR0           ;
+; ADDR0out  ; ADDR0      ; 6.385  ; 6.385  ; Fall       ; ADDR0           ;
+; ADDR1out  ; ADDR0      ; 8.933  ; 8.933  ; Fall       ; ADDR0           ;
+; ADDR2out  ; ADDR0      ; 10.082 ; 10.082 ; Fall       ; ADDR0           ;
+; ADDR3out  ; ADDR0      ; 10.107 ; 10.107 ; Fall       ; ADDR0           ;
+; ADDR0out  ; C2         ; 7.507  ; 7.507  ; Rise       ; C2              ;
+; ADDR1out  ; C2         ; 8.137  ; 8.137  ; Rise       ; C2              ;
+; ADDR2out  ; C2         ; 8.944  ; 8.944  ; Rise       ; C2              ;
+; ADDR3out  ; C2         ; 8.962  ; 8.962  ; Rise       ; C2              ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; ADDR0out  ; ADDR0      ; 6.231 ; 6.231 ; Rise       ; ADDR0           ;
+; ADDR0out  ; ADDR0      ; 6.231 ; 6.231 ; Fall       ; ADDR0           ;
+; ADDR1out  ; ADDR0      ; 8.779 ; 8.779 ; Fall       ; ADDR0           ;
+; ADDR2out  ; ADDR0      ; 9.928 ; 9.928 ; Fall       ; ADDR0           ;
+; ADDR3out  ; ADDR0      ; 9.953 ; 9.953 ; Fall       ; ADDR0           ;
+; ADDR0out  ; C2         ; 7.507 ; 7.507 ; Rise       ; C2              ;
+; ADDR1out  ; C2         ; 8.137 ; 8.137 ; Rise       ; C2              ;
+; ADDR2out  ; C2         ; 8.944 ; 8.944 ; Rise       ; C2              ;
+; ADDR3out  ; C2         ; 8.962 ; 8.962 ; Rise       ; C2              ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------+
+; Propagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; ADDR1      ; ADDR1out    ; 6.956  ;        ;        ; 6.956  ;
+; ADDR2      ; ADDR2out    ; 7.738  ;        ;        ; 7.738  ;
+; ADDR3      ; ADDR3out    ; 8.646  ;        ;        ; 8.646  ;
+; C0         ; ADDR0out    ;        ; 10.881 ; 10.881 ;        ;
+; C0         ; ADDR1out    ;        ; 11.376 ; 11.376 ;        ;
+; C0         ; ADDR2out    ;        ; 12.104 ; 12.104 ;        ;
+; C0         ; ADDR3out    ;        ; 12.206 ; 12.206 ;        ;
+; C1         ; ADDR0out    ; 11.336 ; 11.178 ; 11.178 ; 11.336 ;
+; C1         ; ADDR1out    ; 11.910 ; 11.676 ; 11.676 ; 11.910 ;
+; C1         ; ADDR2out    ; 12.213 ; 12.403 ; 12.403 ; 12.213 ;
+; C1         ; ADDR3out    ; 12.069 ; 11.878 ; 11.878 ; 12.069 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++--------------------------------------------------------------+
+; Minimum Propagation Delay                                    ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; ADDR1      ; ADDR1out    ; 6.720  ;        ;        ; 6.720  ;
+; ADDR2      ; ADDR2out    ; 7.586  ;        ;        ; 7.586  ;
+; ADDR3      ; ADDR3out    ; 8.453  ;        ;        ; 8.453  ;
+; C0         ; ADDR0out    ;        ; 10.881 ; 10.881 ;        ;
+; C0         ; ADDR1out    ;        ; 11.376 ; 11.376 ;        ;
+; C0         ; ADDR2out    ;        ; 12.104 ; 12.104 ;        ;
+; C0         ; ADDR3out    ;        ; 12.206 ; 12.206 ;        ;
+; C1         ; ADDR0out    ; 11.336 ; 11.178 ; 11.178 ; 11.336 ;
+; C1         ; ADDR1out    ; 11.910 ; 11.676 ; 11.676 ; 11.910 ;
+; C1         ; ADDR2out    ; 12.213 ; 12.403 ; 12.403 ; 12.213 ;
+; C1         ; ADDR3out    ; 12.069 ; 11.878 ; 11.878 ; 12.069 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; C2    ; -0.382 ; -1.035        ;
+; ADDR0 ; 0.142  ; 0.000         ;
++-------+--------+---------------+
+
+
++--------------------------------+
+; Fast Model Hold Summary        ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; C2    ; -0.125 ; -0.125        ;
+; ADDR0 ; 0.359  ; 0.000         ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Recovery Summary   ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; C2    ; 0.130 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------+
+; Fast Model Removal Summary    ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; C2    ; 0.193 ; 0.000         ;
++-------+-------+---------------+
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; ADDR0 ; -1.380 ; -4.686                ;
+; C2    ; -1.222 ; -5.222                ;
++-------+--------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'C2'                                                                                                                                             ;
++--------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                ; To Node                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.382 ; 4BitCounter:inst|74193:inst|23~_emulated ; 4BitCounter:inst|74193:inst|23~_emulated ; ADDR0        ; C2          ; 0.500        ; -0.344     ; 0.570      ;
+; -0.364 ; 4BitCounter:inst|74193:inst|24~_emulated ; 4BitCounter:inst|74193:inst|24~_emulated ; ADDR0        ; C2          ; 0.500        ; -0.334     ; 0.562      ;
+; -0.289 ; 4BitCounter:inst|74193:inst|25~_emulated ; 4BitCounter:inst|74193:inst|25~_emulated ; ADDR0        ; C2          ; 0.500        ; -0.241     ; 0.580      ;
+; 0.334  ; 4BitCounter:inst|74193:inst|26~_emulated ; 4BitCounter:inst|74193:inst|26~_emulated ; C2           ; C2          ; 1.000        ; 0.000      ; 0.698      ;
+; 0.452  ; 4BitCounter:inst|74193:inst|25~_emulated ; 4BitCounter:inst|74193:inst|25~_emulated ; C2           ; C2          ; 1.000        ; 0.000      ; 0.580      ;
+; 0.454  ; ADDR0                                    ; 4BitCounter:inst|74193:inst|26~_emulated ; ADDR0        ; C2          ; 0.500        ; 1.301      ; 1.379      ;
+; 0.462  ; 4BitCounter:inst|74193:inst|23~_emulated ; 4BitCounter:inst|74193:inst|23~_emulated ; C2           ; C2          ; 1.000        ; 0.000      ; 0.570      ;
+; 0.470  ; 4BitCounter:inst|74193:inst|24~_emulated ; 4BitCounter:inst|74193:inst|24~_emulated ; C2           ; C2          ; 1.000        ; 0.000      ; 0.562      ;
+; 0.954  ; ADDR0                                    ; 4BitCounter:inst|74193:inst|26~_emulated ; ADDR0        ; C2          ; 1.000        ; 1.301      ; 1.379      ;
++--------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'ADDR0'                                                                                                                                         ;
++-------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                ; To Node                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.142 ; 4BitCounter:inst|74193:inst|25~_emulated ; 4BitCounter:inst|74193:inst|25~_emulated ; C2           ; ADDR0       ; 0.500        ; 0.190      ; 0.580      ;
+; 0.253 ; 4BitCounter:inst|74193:inst|24~_emulated ; 4BitCounter:inst|74193:inst|24~_emulated ; C2           ; ADDR0       ; 0.500        ; 0.283      ; 0.562      ;
+; 0.255 ; 4BitCounter:inst|74193:inst|23~_emulated ; 4BitCounter:inst|74193:inst|23~_emulated ; C2           ; ADDR0       ; 0.500        ; 0.293      ; 0.570      ;
+; 0.401 ; 4BitCounter:inst|74193:inst|25~_emulated ; 4BitCounter:inst|74193:inst|25~_emulated ; ADDR0        ; ADDR0       ; 1.000        ; -0.051     ; 0.580      ;
+; 0.411 ; 4BitCounter:inst|74193:inst|23~_emulated ; 4BitCounter:inst|74193:inst|23~_emulated ; ADDR0        ; ADDR0       ; 1.000        ; -0.051     ; 0.570      ;
+; 0.419 ; 4BitCounter:inst|74193:inst|24~_emulated ; 4BitCounter:inst|74193:inst|24~_emulated ; ADDR0        ; ADDR0       ; 1.000        ; -0.051     ; 0.562      ;
++-------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'C2'                                                                                                                                              ;
++--------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                ; To Node                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.125 ; ADDR0                                    ; 4BitCounter:inst|74193:inst|26~_emulated ; ADDR0        ; C2          ; 0.000        ; 1.301      ; 1.328      ;
+; 0.375  ; ADDR0                                    ; 4BitCounter:inst|74193:inst|26~_emulated ; ADDR0        ; C2          ; -0.500       ; 1.301      ; 1.328      ;
+; 0.410  ; 4BitCounter:inst|74193:inst|24~_emulated ; 4BitCounter:inst|74193:inst|24~_emulated ; C2           ; C2          ; 0.000        ; 0.000      ; 0.562      ;
+; 0.418  ; 4BitCounter:inst|74193:inst|23~_emulated ; 4BitCounter:inst|74193:inst|23~_emulated ; C2           ; C2          ; 0.000        ; 0.000      ; 0.570      ;
+; 0.428  ; 4BitCounter:inst|74193:inst|25~_emulated ; 4BitCounter:inst|74193:inst|25~_emulated ; C2           ; C2          ; 0.000        ; 0.000      ; 0.580      ;
+; 0.546  ; 4BitCounter:inst|74193:inst|26~_emulated ; 4BitCounter:inst|74193:inst|26~_emulated ; C2           ; C2          ; 0.000        ; 0.000      ; 0.698      ;
+; 1.118  ; 4BitCounter:inst|74193:inst|25~_emulated ; 4BitCounter:inst|74193:inst|25~_emulated ; ADDR0        ; C2          ; -0.500       ; -0.190     ; 0.580      ;
+; 1.193  ; 4BitCounter:inst|74193:inst|24~_emulated ; 4BitCounter:inst|74193:inst|24~_emulated ; ADDR0        ; C2          ; -0.500       ; -0.283     ; 0.562      ;
+; 1.211  ; 4BitCounter:inst|74193:inst|23~_emulated ; 4BitCounter:inst|74193:inst|23~_emulated ; ADDR0        ; C2          ; -0.500       ; -0.293     ; 0.570      ;
++--------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'ADDR0'                                                                                                                                          ;
++-------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                ; To Node                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.359 ; 4BitCounter:inst|74193:inst|24~_emulated ; 4BitCounter:inst|74193:inst|24~_emulated ; ADDR0        ; ADDR0       ; 0.000        ; 0.051      ; 0.562      ;
+; 0.367 ; 4BitCounter:inst|74193:inst|23~_emulated ; 4BitCounter:inst|74193:inst|23~_emulated ; ADDR0        ; ADDR0       ; 0.000        ; 0.051      ; 0.570      ;
+; 0.377 ; 4BitCounter:inst|74193:inst|25~_emulated ; 4BitCounter:inst|74193:inst|25~_emulated ; ADDR0        ; ADDR0       ; 0.000        ; 0.051      ; 0.580      ;
+; 0.574 ; 4BitCounter:inst|74193:inst|23~_emulated ; 4BitCounter:inst|74193:inst|23~_emulated ; C2           ; ADDR0       ; -0.500       ; 0.344      ; 0.570      ;
+; 0.576 ; 4BitCounter:inst|74193:inst|24~_emulated ; 4BitCounter:inst|74193:inst|24~_emulated ; C2           ; ADDR0       ; -0.500       ; 0.334      ; 0.562      ;
+; 0.687 ; 4BitCounter:inst|74193:inst|25~_emulated ; 4BitCounter:inst|74193:inst|25~_emulated ; C2           ; ADDR0       ; -0.500       ; 0.241      ; 0.580      ;
++-------+------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Recovery: 'C2'                                                                                                          ;
++-------+-----------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.130 ; ADDR0     ; 4BitCounter:inst|74193:inst|26~_emulated ; ADDR0        ; C2          ; 0.500        ; 1.301      ; 1.703      ;
+; 0.630 ; ADDR0     ; 4BitCounter:inst|74193:inst|26~_emulated ; ADDR0        ; C2          ; 1.000        ; 1.301      ; 1.703      ;
++-------+-----------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Removal: 'C2'                                                                                                           ;
++-------+-----------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.193 ; ADDR0     ; 4BitCounter:inst|74193:inst|26~_emulated ; ADDR0        ; C2          ; 0.000        ; 1.301      ; 1.646      ;
+; 0.693 ; ADDR0     ; 4BitCounter:inst|74193:inst|26~_emulated ; ADDR0        ; C2          ; -0.500       ; 1.301      ; 1.646      ;
++-------+-----------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'ADDR0'                                                                                   ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                   ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; ADDR0 ; Rise       ; ADDR0                                    ;
+; -0.551 ; 0.449        ; 1.000          ; High Pulse Width ; ADDR0 ; Fall       ; 4BitCounter:inst|74193:inst|23~_emulated ;
+; -0.551 ; 0.449        ; 1.000          ; Low Pulse Width  ; ADDR0 ; Fall       ; 4BitCounter:inst|74193:inst|23~_emulated ;
+; -0.551 ; 0.449        ; 1.000          ; High Pulse Width ; ADDR0 ; Fall       ; 4BitCounter:inst|74193:inst|24~_emulated ;
+; -0.551 ; 0.449        ; 1.000          ; Low Pulse Width  ; ADDR0 ; Fall       ; 4BitCounter:inst|74193:inst|24~_emulated ;
+; -0.551 ; 0.449        ; 1.000          ; High Pulse Width ; ADDR0 ; Fall       ; 4BitCounter:inst|74193:inst|25~_emulated ;
+; -0.551 ; 0.449        ; 1.000          ; Low Pulse Width  ; ADDR0 ; Fall       ; 4BitCounter:inst|74193:inst|25~_emulated ;
+; 0.449  ; 0.449        ; 0.000          ; High Pulse Width ; ADDR0 ; Fall       ; inst|inst|21|combout                     ;
+; 0.449  ; 0.449        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Fall       ; inst|inst|21|combout                     ;
+; 0.449  ; 0.449        ; 0.000          ; High Pulse Width ; ADDR0 ; Rise       ; inst|inst|21|datab                       ;
+; 0.449  ; 0.449        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Rise       ; inst|inst|21|datab                       ;
+; 0.449  ; 0.449        ; 0.000          ; High Pulse Width ; ADDR0 ; Fall       ; inst|inst|23~_emulated|clk               ;
+; 0.449  ; 0.449        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Fall       ; inst|inst|23~_emulated|clk               ;
+; 0.449  ; 0.449        ; 0.000          ; High Pulse Width ; ADDR0 ; Fall       ; inst|inst|24~_emulated|clk               ;
+; 0.449  ; 0.449        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Fall       ; inst|inst|24~_emulated|clk               ;
+; 0.449  ; 0.449        ; 0.000          ; High Pulse Width ; ADDR0 ; Fall       ; inst|inst|25~_emulated|clk               ;
+; 0.449  ; 0.449        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Fall       ; inst|inst|25~_emulated|clk               ;
+; 0.449  ; 0.449        ; 0.000          ; High Pulse Width ; ADDR0 ; Rise       ; inst|inst|26~2|combout                   ;
+; 0.449  ; 0.449        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Rise       ; inst|inst|26~2|combout                   ;
+; 0.449  ; 0.449        ; 0.000          ; High Pulse Width ; ADDR0 ; Fall       ; inst|inst|51|combout                     ;
+; 0.449  ; 0.449        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Fall       ; inst|inst|51|combout                     ;
+; 0.449  ; 0.449        ; 0.000          ; High Pulse Width ; ADDR0 ; Rise       ; inst|inst|51|datab                       ;
+; 0.449  ; 0.449        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Rise       ; inst|inst|51|datab                       ;
+; 0.449  ; 0.449        ; 0.000          ; High Pulse Width ; ADDR0 ; Fall       ; inst|inst|5|combout                      ;
+; 0.449  ; 0.449        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Fall       ; inst|inst|5|combout                      ;
+; 0.449  ; 0.449        ; 0.000          ; High Pulse Width ; ADDR0 ; Rise       ; inst|inst|5|datad                        ;
+; 0.449  ; 0.449        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Rise       ; inst|inst|5|datad                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ADDR0 ; Rise       ; ADDR0|combout                            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Rise       ; ADDR0|combout                            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ADDR0 ; Rise       ; inst|inst|26~2|datac                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Rise       ; inst|inst|26~2|datac                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ADDR0 ; Fall       ; inst|inst|26~2|datad                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Fall       ; inst|inst|26~2|datad                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ADDR0 ; Rise       ; inst|inst|52|combout                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Rise       ; inst|inst|52|combout                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ADDR0 ; Rise       ; inst|inst|52|datad                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Rise       ; inst|inst|52|datad                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ADDR0 ; Fall       ; inst|inst|85~0|combout                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Fall       ; inst|inst|85~0|combout                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ADDR0 ; Rise       ; inst|inst|85~0|datad                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ADDR0 ; Rise       ; inst|inst|85~0|datad                     ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'C2'                                                                                      ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                   ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; C2    ; Rise       ; C2                                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; C2    ; Rise       ; 4BitCounter:inst|74193:inst|23~_emulated ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; C2    ; Rise       ; 4BitCounter:inst|74193:inst|23~_emulated ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; C2    ; Rise       ; 4BitCounter:inst|74193:inst|24~_emulated ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; C2    ; Rise       ; 4BitCounter:inst|74193:inst|24~_emulated ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; C2    ; Rise       ; 4BitCounter:inst|74193:inst|25~_emulated ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; C2    ; Rise       ; 4BitCounter:inst|74193:inst|25~_emulated ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; C2    ; Rise       ; 4BitCounter:inst|74193:inst|26~_emulated ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; C2    ; Rise       ; 4BitCounter:inst|74193:inst|26~_emulated ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C2    ; Rise       ; C2|combout                               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C2    ; Rise       ; C2|combout                               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C2    ; Rise       ; inst|inst|21|combout                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C2    ; Rise       ; inst|inst|21|combout                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C2    ; Rise       ; inst|inst|21|datac                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C2    ; Rise       ; inst|inst|21|datac                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C2    ; Rise       ; inst|inst|23~_emulated|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C2    ; Rise       ; inst|inst|23~_emulated|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C2    ; Rise       ; inst|inst|24~_emulated|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C2    ; Rise       ; inst|inst|24~_emulated|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C2    ; Rise       ; inst|inst|25~_emulated|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C2    ; Rise       ; inst|inst|25~_emulated|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C2    ; Rise       ; inst|inst|26~_emulated|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C2    ; Rise       ; inst|inst|26~_emulated|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C2    ; Rise       ; inst|inst|51|combout                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C2    ; Rise       ; inst|inst|51|combout                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C2    ; Rise       ; inst|inst|51|datac                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C2    ; Rise       ; inst|inst|51|datac                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C2    ; Rise       ; inst|inst|5|combout                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C2    ; Rise       ; inst|inst|5|combout                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C2    ; Rise       ; inst|inst|5|datac                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C2    ; Rise       ; inst|inst|5|datac                        ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; ADDR1     ; ADDR0      ; -0.311 ; -0.311 ; Fall       ; ADDR0           ;
+; ADDR2     ; ADDR0      ; -0.393 ; -0.393 ; Fall       ; ADDR0           ;
+; ADDR3     ; ADDR0      ; 0.012  ; 0.012  ; Fall       ; ADDR0           ;
+; C0        ; ADDR0      ; 2.215  ; 2.215  ; Fall       ; ADDR0           ;
+; C1        ; ADDR0      ; 2.438  ; 2.438  ; Fall       ; ADDR0           ;
+; ADDR0     ; C2         ; 0.046  ; 0.046  ; Rise       ; C2              ;
+; ADDR1     ; C2         ; -0.121 ; -0.121 ; Rise       ; C2              ;
+; ADDR2     ; C2         ; -0.110 ; -0.110 ; Rise       ; C2              ;
+; ADDR3     ; C2         ; 0.305  ; 0.305  ; Rise       ; C2              ;
+; C0        ; C2         ; 2.600  ; 2.600  ; Rise       ; C2              ;
+; C1        ; C2         ; 2.795  ; 2.795  ; Rise       ; C2              ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; ADDR1     ; ADDR0      ; 0.564  ; 0.564  ; Fall       ; ADDR0           ;
+; ADDR2     ; ADDR0      ; 0.645  ; 0.645  ; Fall       ; ADDR0           ;
+; ADDR3     ; ADDR0      ; 0.254  ; 0.254  ; Fall       ; ADDR0           ;
+; C0        ; ADDR0      ; -1.939 ; -1.939 ; Fall       ; ADDR0           ;
+; C1        ; ADDR0      ; -1.827 ; -1.827 ; Fall       ; ADDR0           ;
+; ADDR0     ; C2         ; 0.125  ; 0.125  ; Rise       ; C2              ;
+; ADDR1     ; C2         ; 0.323  ; 0.323  ; Rise       ; C2              ;
+; ADDR2     ; C2         ; 0.311  ; 0.311  ; Rise       ; C2              ;
+; ADDR3     ; C2         ; -0.090 ; -0.090 ; Rise       ; C2              ;
+; C0        ; C2         ; -2.283 ; -2.283 ; Rise       ; C2              ;
+; C1        ; C2         ; -2.171 ; -2.171 ; Rise       ; C2              ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; ADDR0out  ; ADDR0      ; 2.923 ; 2.923 ; Rise       ; ADDR0           ;
+; ADDR0out  ; ADDR0      ; 2.923 ; 2.923 ; Fall       ; ADDR0           ;
+; ADDR1out  ; ADDR0      ; 4.045 ; 4.045 ; Fall       ; ADDR0           ;
+; ADDR2out  ; ADDR0      ; 4.448 ; 4.448 ; Fall       ; ADDR0           ;
+; ADDR3out  ; ADDR0      ; 4.471 ; 4.471 ; Fall       ; ADDR0           ;
+; ADDR0out  ; C2         ; 3.543 ; 3.543 ; Rise       ; C2              ;
+; ADDR1out  ; C2         ; 3.804 ; 3.804 ; Rise       ; C2              ;
+; ADDR2out  ; C2         ; 4.114 ; 4.114 ; Rise       ; C2              ;
+; ADDR3out  ; C2         ; 4.127 ; 4.127 ; Rise       ; C2              ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; ADDR0out  ; ADDR0      ; 2.872 ; 2.872 ; Rise       ; ADDR0           ;
+; ADDR0out  ; ADDR0      ; 2.872 ; 2.872 ; Fall       ; ADDR0           ;
+; ADDR1out  ; ADDR0      ; 3.994 ; 3.994 ; Fall       ; ADDR0           ;
+; ADDR2out  ; ADDR0      ; 4.397 ; 4.397 ; Fall       ; ADDR0           ;
+; ADDR3out  ; ADDR0      ; 4.420 ; 4.420 ; Fall       ; ADDR0           ;
+; ADDR0out  ; C2         ; 3.543 ; 3.543 ; Rise       ; C2              ;
+; ADDR1out  ; C2         ; 3.804 ; 3.804 ; Rise       ; C2              ;
+; ADDR2out  ; C2         ; 4.114 ; 4.114 ; Rise       ; C2              ;
+; ADDR3out  ; C2         ; 4.127 ; 4.127 ; Rise       ; C2              ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------+
+; Propagation Delay                                        ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; ADDR1      ; ADDR1out    ; 3.135 ;       ;       ; 3.135 ;
+; ADDR2      ; ADDR2out    ; 3.474 ;       ;       ; 3.474 ;
+; ADDR3      ; ADDR3out    ; 3.894 ;       ;       ; 3.894 ;
+; C0         ; ADDR0out    ;       ; 5.477 ; 5.477 ;       ;
+; C0         ; ADDR1out    ;       ; 5.661 ; 5.661 ;       ;
+; C0         ; ADDR2out    ;       ; 5.993 ; 5.993 ;       ;
+; C0         ; ADDR3out    ;       ; 5.992 ; 5.992 ;       ;
+; C1         ; ADDR0out    ; 5.672 ; 5.586 ; 5.586 ; 5.672 ;
+; C1         ; ADDR1out    ; 5.884 ; 5.776 ; 5.776 ; 5.884 ;
+; C1         ; ADDR2out    ; 5.995 ; 6.074 ; 6.074 ; 5.995 ;
+; C1         ; ADDR3out    ; 5.943 ; 5.880 ; 5.880 ; 5.943 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------+
+; Minimum Propagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; ADDR1      ; ADDR1out    ; 3.053 ;       ;       ; 3.053 ;
+; ADDR2      ; ADDR2out    ; 3.393 ;       ;       ; 3.393 ;
+; ADDR3      ; ADDR3out    ; 3.799 ;       ;       ; 3.799 ;
+; C0         ; ADDR0out    ;       ; 5.477 ; 5.477 ;       ;
+; C0         ; ADDR1out    ;       ; 5.661 ; 5.661 ;       ;
+; C0         ; ADDR2out    ;       ; 5.993 ; 5.993 ;       ;
+; C0         ; ADDR3out    ;       ; 5.992 ; 5.992 ;       ;
+; C1         ; ADDR0out    ; 5.672 ; 5.586 ; 5.586 ; 5.672 ;
+; C1         ; ADDR1out    ; 5.884 ; 5.776 ; 5.776 ; 5.884 ;
+; C1         ; ADDR2out    ; 5.995 ; 6.074 ; 6.074 ; 5.995 ;
+; C1         ; ADDR3out    ; 5.943 ; 5.880 ; 5.880 ; 5.943 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+--------+--------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+--------+----------+---------+---------------------+
+; Worst-case Slack ; -2.009 ; -0.125 ; -0.568   ; 0.193   ; -1.631              ;
+;  ADDR0           ; -0.537 ; 0.359  ; N/A      ; N/A     ; -1.631              ;
+;  C2              ; -2.009 ; -0.125 ; -0.568   ; 0.193   ; -1.469              ;
+; Design-wide TNS  ; -7.954 ; -0.125 ; -0.568   ; 0.0     ; -12.578             ;
+;  ADDR0           ; -1.559 ; 0.000  ; N/A      ; N/A     ; -6.221              ;
+;  C2              ; -6.395 ; -0.125 ; -0.568   ; 0.000   ; -6.357              ;
++------------------+--------+--------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; ADDR1     ; ADDR0      ; -0.311 ; -0.311 ; Fall       ; ADDR0           ;
+; ADDR2     ; ADDR0      ; -0.393 ; -0.393 ; Fall       ; ADDR0           ;
+; ADDR3     ; ADDR0      ; 0.057  ; 0.057  ; Fall       ; ADDR0           ;
+; C0        ; ADDR0      ; 3.980  ; 3.980  ; Fall       ; ADDR0           ;
+; C1        ; ADDR0      ; 4.514  ; 4.514  ; Fall       ; ADDR0           ;
+; ADDR0     ; C2         ; 0.597  ; 0.597  ; Rise       ; C2              ;
+; ADDR1     ; C2         ; 0.202  ; 0.202  ; Rise       ; C2              ;
+; ADDR2     ; C2         ; 0.144  ; 0.144  ; Rise       ; C2              ;
+; ADDR3     ; C2         ; 1.048  ; 1.048  ; Rise       ; C2              ;
+; C0        ; C2         ; 5.093  ; 5.093  ; Rise       ; C2              ;
+; C1        ; C2         ; 5.548  ; 5.548  ; Rise       ; C2              ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; ADDR1     ; ADDR0      ; 1.078  ; 1.078  ; Fall       ; ADDR0           ;
+; ADDR2     ; ADDR0      ; 1.394  ; 1.394  ; Fall       ; ADDR0           ;
+; ADDR3     ; ADDR0      ; 0.538  ; 0.538  ; Fall       ; ADDR0           ;
+; C0        ; ADDR0      ; -1.939 ; -1.939 ; Fall       ; ADDR0           ;
+; C1        ; ADDR0      ; -1.827 ; -1.827 ; Fall       ; ADDR0           ;
+; ADDR0     ; C2         ; 0.125  ; 0.125  ; Rise       ; C2              ;
+; ADDR1     ; C2         ; 0.323  ; 0.323  ; Rise       ; C2              ;
+; ADDR2     ; C2         ; 0.311  ; 0.311  ; Rise       ; C2              ;
+; ADDR3     ; C2         ; -0.090 ; -0.090 ; Rise       ; C2              ;
+; C0        ; C2         ; -2.283 ; -2.283 ; Rise       ; C2              ;
+; C1        ; C2         ; -2.171 ; -2.171 ; Rise       ; C2              ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; ADDR0out  ; ADDR0      ; 6.385  ; 6.385  ; Rise       ; ADDR0           ;
+; ADDR0out  ; ADDR0      ; 6.385  ; 6.385  ; Fall       ; ADDR0           ;
+; ADDR1out  ; ADDR0      ; 8.933  ; 8.933  ; Fall       ; ADDR0           ;
+; ADDR2out  ; ADDR0      ; 10.082 ; 10.082 ; Fall       ; ADDR0           ;
+; ADDR3out  ; ADDR0      ; 10.107 ; 10.107 ; Fall       ; ADDR0           ;
+; ADDR0out  ; C2         ; 7.507  ; 7.507  ; Rise       ; C2              ;
+; ADDR1out  ; C2         ; 8.137  ; 8.137  ; Rise       ; C2              ;
+; ADDR2out  ; C2         ; 8.944  ; 8.944  ; Rise       ; C2              ;
+; ADDR3out  ; C2         ; 8.962  ; 8.962  ; Rise       ; C2              ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; ADDR0out  ; ADDR0      ; 2.872 ; 2.872 ; Rise       ; ADDR0           ;
+; ADDR0out  ; ADDR0      ; 2.872 ; 2.872 ; Fall       ; ADDR0           ;
+; ADDR1out  ; ADDR0      ; 3.994 ; 3.994 ; Fall       ; ADDR0           ;
+; ADDR2out  ; ADDR0      ; 4.397 ; 4.397 ; Fall       ; ADDR0           ;
+; ADDR3out  ; ADDR0      ; 4.420 ; 4.420 ; Fall       ; ADDR0           ;
+; ADDR0out  ; C2         ; 3.543 ; 3.543 ; Rise       ; C2              ;
+; ADDR1out  ; C2         ; 3.804 ; 3.804 ; Rise       ; C2              ;
+; ADDR2out  ; C2         ; 4.114 ; 4.114 ; Rise       ; C2              ;
+; ADDR3out  ; C2         ; 4.127 ; 4.127 ; Rise       ; C2              ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------+
+; Progagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; ADDR1      ; ADDR1out    ; 6.956  ;        ;        ; 6.956  ;
+; ADDR2      ; ADDR2out    ; 7.738  ;        ;        ; 7.738  ;
+; ADDR3      ; ADDR3out    ; 8.646  ;        ;        ; 8.646  ;
+; C0         ; ADDR0out    ;        ; 10.881 ; 10.881 ;        ;
+; C0         ; ADDR1out    ;        ; 11.376 ; 11.376 ;        ;
+; C0         ; ADDR2out    ;        ; 12.104 ; 12.104 ;        ;
+; C0         ; ADDR3out    ;        ; 12.206 ; 12.206 ;        ;
+; C1         ; ADDR0out    ; 11.336 ; 11.178 ; 11.178 ; 11.336 ;
+; C1         ; ADDR1out    ; 11.910 ; 11.676 ; 11.676 ; 11.910 ;
+; C1         ; ADDR2out    ; 12.213 ; 12.403 ; 12.403 ; 12.213 ;
+; C1         ; ADDR3out    ; 12.069 ; 11.878 ; 11.878 ; 12.069 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++----------------------------------------------------------+
+; Minimum Progagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; ADDR1      ; ADDR1out    ; 3.053 ;       ;       ; 3.053 ;
+; ADDR2      ; ADDR2out    ; 3.393 ;       ;       ; 3.393 ;
+; ADDR3      ; ADDR3out    ; 3.799 ;       ;       ; 3.799 ;
+; C0         ; ADDR0out    ;       ; 5.477 ; 5.477 ;       ;
+; C0         ; ADDR1out    ;       ; 5.661 ; 5.661 ;       ;
+; C0         ; ADDR2out    ;       ; 5.993 ; 5.993 ;       ;
+; C0         ; ADDR3out    ;       ; 5.992 ; 5.992 ;       ;
+; C1         ; ADDR0out    ; 5.672 ; 5.586 ; 5.586 ; 5.672 ;
+; C1         ; ADDR1out    ; 5.884 ; 5.776 ; 5.776 ; 5.884 ;
+; C1         ; ADDR2out    ; 5.995 ; 6.074 ; 6.074 ; 5.995 ;
+; C1         ; ADDR3out    ; 5.943 ; 5.880 ; 5.880 ; 5.943 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; ADDR0      ; ADDR0    ; 0        ; 0        ; 0        ; 3        ;
+; C2         ; ADDR0    ; 0        ; 0        ; 3        ; 0        ;
+; ADDR0      ; C2       ; 2        ; 5        ; 0        ; 0        ;
+; C2         ; C2       ; 4        ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; ADDR0      ; ADDR0    ; 0        ; 0        ; 0        ; 3        ;
+; C2         ; ADDR0    ; 0        ; 0        ; 3        ; 0        ;
+; ADDR0      ; C2       ; 2        ; 5        ; 0        ; 0        ;
+; C2         ; C2       ; 4        ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Recovery Transfers                                                ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; ADDR0      ; C2       ; 2        ; 2        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Removal Transfers                                                 ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; ADDR0      ; C2       ; 2        ; 2        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 6     ; 6    ;
+; Unconstrained Input Port Paths  ; 34    ; 34   ;
+; Unconstrained Output Ports      ; 4     ; 4    ;
+; Unconstrained Output Port Paths ; 20    ; 20   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Nov 30 07:44:31 2020
+Info: Command: quartus_sta PC -c PC
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 4 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'PC.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name ADDR0 ADDR0
+    Info (332105): create_clock -period 1.000 -name C2 C2
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.009
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.009        -6.395 C2 
+    Info (332119):    -0.537        -1.559 ADDR0 
+Info (332146): Worst-case hold slack is 0.195
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.195         0.000 C2 
+    Info (332119):     0.464         0.000 ADDR0 
+Info (332146): Worst-case recovery slack is -0.568
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.568        -0.568 C2 
+Info (332146): Worst-case removal slack is 0.704
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.704         0.000 C2 
+Info (332146): Worst-case minimum pulse width slack is -1.631
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.631        -6.221 ADDR0 
+    Info (332119):    -1.469        -6.357 C2 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.382
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.382        -1.035 C2 
+    Info (332119):     0.142         0.000 ADDR0 
+Info (332146): Worst-case hold slack is -0.125
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.125        -0.125 C2 
+    Info (332119):     0.359         0.000 ADDR0 
+Info (332146): Worst-case recovery slack is 0.130
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.130         0.000 C2 
+Info (332146): Worst-case removal slack is 0.193
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.193         0.000 C2 
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380        -4.686 ADDR0 
+    Info (332119):    -1.222        -5.222 C2 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4536 megabytes
+    Info: Processing ended: Mon Nov 30 07:44:31 2020
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

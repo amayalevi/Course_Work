@@ -1,0 +1,45 @@
+|PC
+ADDR1out <= 4BitCounter:inst.Bout
+C1 => inst1.IN0
+ADDR0 => 4BitCounter:inst.A
+ADDR1 => 4BitCounter:inst.B
+ADDR2 => 4BitCounter:inst.C
+ADDR3 => 4BitCounter:inst.D
+C2 => inst3.IN0
+C0 => inst2.IN0
+ADDR2out <= 4BitCounter:inst.Cout
+ADDR3out <= 4BitCounter:inst.Dout
+ADDR0out <= 4BitCounter:inst.Aout
+
+
+|PC|4BitCounter:inst
+Aout <= 74193:inst.QA
+D => 74193:inst.D
+C => 74193:inst.C
+B => 74193:inst.B
+A => 74193:inst.A
+Clear => inst2.IN0
+Increment => inst1.IN0
+Load => 74193:inst.LDN
+Bout <= 74193:inst.QB
+Cout <= 74193:inst.QC
+Dout <= 74193:inst.QD
+
+
+|PC|4BitCounter:inst|74193:inst
+BON <= 28.DB_MAX_OUTPUT_PORT_TYPE
+CLR => 44.IN0
+LDN => 43.IN0
+B => 53.IN2
+A => 52.IN2
+DN => 90.IN0
+UP => 89.IN0
+C => 54.IN2
+D => 55.IN2
+CON <= 27.DB_MAX_OUTPUT_PORT_TYPE
+QD <= 23.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 24.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 25.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 26.DB_MAX_OUTPUT_PORT_TYPE
+
+
